@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+</head>
+<body>
+<main>
+    <form name="myform" action="javascript:completeAndRedirect();">
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label for="salutation">Salutation:</label> <br>
+            <select name="salutation" id="salutation">
+                <option value="None">--None--</option>
+                <option value="Mr.">Mr.</option>
+                <option value="Mrs.">Mrs.</option>
+                <option value="Ms.">Ms.</option>
+            </select>
+            <p>
+                <label>First name: <input type="text" name="firstname" pattern="[A-Za-z]{2-30}" required></label>
+            </p>
+            <p>
+                <label>Last name: <input type="text" name="lastname" pattern="[A-Za-z]{2-30}" required></label>
+            </p>
+            <p>
+                <label>Gender:
+                    <input type="radio" name="gender" value="Male"> <span>Male</span>
+                    <input type="radio" name="gender" value="Female"> <span>Female</span>
+                </label>
+            </p>
+            <p>
+                <label>Email: <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                     required></label>
+            </p>
+            <p>
+                <label>Date of Birth: <input type="date" name="date_birth" min="1980-04-01"></label>
+            </p>
+            <p>
+                <label>Address: <br><textarea name="address" style="resize:none" cols="30" rows="3"></textarea></label>
+            </p>
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+        </fieldset>
+    </form>
+    <p id="text"></p>
+    <table border="1">
+        <tr>
+            <th>Product</th>
+            <th>Flavors</th>
+        </tr>
+        <tr>
+            <td rowspan="3">Milk</td>
+            <td>Almond</td>
+        </tr>
+        <tr>
+            <td>Mango</td>
+        </tr>
+        <tr>
+            <td>Shokolate</td>
+        </tr>
+        <tr>
+            <td colspan="2">These are exclusive flavors</td>
+        </tr>
+    </table>
+</main>
+<script src="file.js"></script>
+</body>
+</html>
